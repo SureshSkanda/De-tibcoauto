@@ -2,7 +2,7 @@
 
 node {
     stage 'Checkout'
-    #git url: 'tibcoauto\tibconow.auto'
+    git url: 'tibcoauto\tibconow.auto'
 
 
     stage 'Build EAR'

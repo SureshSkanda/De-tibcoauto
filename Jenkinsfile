@@ -2,7 +2,7 @@
 
 node {
     stage 'Checkout'
-    git url: 'tibcoauto\tibconow.auto'
+    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'd7a65326-ec53-4ddf-a96e-72593b73db82', url: 'https://github.com/SureshSkanda/De-tibcoauto.git']]])
 
 
     stage 'Build EAR'

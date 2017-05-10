@@ -4,7 +4,9 @@ node {
     stage 'Checkout'
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'd7a65326-ec53-4ddf-a96e-72593b73db82', url: 'https://github.com/SureshSkanda/De-tibcoauto.git']]])
 
-
+    dir('/var/lib/jenkins/workspace/CI-version1.0/Tibco/tibconow.auto') {
+        // some block
+    }
     stage 'Build EAR'
     def application = 'tibconow.auto.application'
     def remote = 'tibco@bw.vm'
